@@ -5,11 +5,11 @@ import Carousel from 'react-native-reanimated-carousel'
 const { width: viewportWidth } = Dimensions.get('window');
 
 const sliderImages = [
-    { image: require('../../assets/Images/slide1.png') },
-    { image: require('../../assets/Images/slide3.png') },
-    { image: require('../../assets/Images/slide2.png') },
-    { image: require('../../assets/Images/slide4.png') },
-    { image: require('../../assets/Images/slide5.png') },
+    { image: require('../../assets/images/slide1.png') },
+    { image: require('../../assets/images/slide3.png') },
+    { image: require('../../assets/images/slide2.png') },
+    { image: require('../../assets/images/slide4.png') },
+    { image: require('../../assets/images/slide5.png') },
 ];
 
 export default function ImageSlider() {

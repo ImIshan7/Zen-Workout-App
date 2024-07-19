@@ -5,6 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import ImageSlider from '../Components/ImageSlider';
+import BodyParts from "../Components/BodyParts";
 
 export default function Home() {
     return (
@@ -24,7 +25,7 @@ export default function Home() {
 
                 <View style={styles.avatarContainer}>
                     <Image
-                        source={require('../../assets/Images/avatar.png')}
+                        source={require('../../assets/images/avatar.png')}
                         style={styles.avatar}
                     />
                     <View style={styles.notificationContainer}>
@@ -39,6 +40,11 @@ export default function Home() {
             </View>
 
             {/* body parts list */}
+
+            <View>
+                <BodyParts/>
+            </View>
+
         </SafeAreaView>
     );
 }

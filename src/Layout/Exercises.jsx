@@ -1,11 +1,12 @@
 // screens/Exercises.js
-import { View, Text, TouchableOpacity, ScrollView, Image } from 'react-native';
+import { View, Text, TouchableOpacity,Image } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { fetchExercisesByBodypart } from '../Api/exerciseDB';
 import { StatusBar } from 'expo-status-bar';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
+import ExerciseList from '../Components/ExerciseList';
+import { ScrollView } from 'react-native-virtualized-view'
 export default function Exercises({ route, navigation }) {
     const [exercises, setExercises] = useState([]);
     const { name, image } = route.params;

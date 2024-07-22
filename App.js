@@ -6,7 +6,7 @@ import MainScreen from './src/Screens/MainScreen.jsx';
 import HomeScreen from './src/Screens/HomeScreen.jsx';
 import BodyParts from './src/Components/BodyParts.jsx';
 import Exercises from './/src/Layout/Exercises.jsx';
-
+import ExerciseDetails from './/src/Layout/ExercisesDetails.jsx'
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -25,6 +25,7 @@ export default function App() {
                     />
                     <Stack.Screen name="BodyParts" component={BodyParts} />
                     <Stack.Screen name="Exercises" component={Exercises} />
+                    <Stack.Screen name="ExerciseDetails" component={ExerciseDetails} />
                 </Stack.Navigator>
             </NavigationContainer>
         </GestureHandlerRootView>

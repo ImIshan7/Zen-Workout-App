@@ -3,8 +3,8 @@ import { rapidApiKey } from '../Constants';
 
 const baseUrl = 'https://exercisedb.p.rapidapi.com';
 
-const apiCall = async (url, params)=>{
-    try{
+const apiCall = async (url, params) => {
+    try {
         const options = {
             method: 'GET',
             url,
@@ -13,16 +13,15 @@ const apiCall = async (url, params)=>{
                 'X-RapidAPI-Key': rapidApiKey,
                 'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
             }
-
         };
         const response = await axios.request(options);
         return response.data;
-    }catch(err){
+    } catch (err) {
         console.log('error: ', err.message);
     }
 }
 
-export const fetchExercisesByBodypart = async (bodyPart)=>{
-    let data = await apiCall(baseUrl+`/exercises/bodyPart/${bodyPart}`);
+export const fetchExercisesByBodypart = async (bodyPart) => {
+    let data = await apiCall(`${baseUrl}/exercises/bodyPart/${bodyPart}`);
     return data;
 }
